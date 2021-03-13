@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.gal-container {
+  padding-top: 30px;
+  width: 600px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 550px;
+}
+
+.gal-container .gal-pics {
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+  height: 480px;
+  position: relative;
+  width: 600px;
+  overflow: hidden;
+}
+
+.gal-container .gal-pics #pics {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.gal-container .gal-pics #pics #img {
+  display: block;
+  height: 480px;
+  width: 600px;
+  margin: auto;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+  position: relative;
+}
+
+.gal-container .gal-pics .circles {
+  position: absolute;
+  width: 70px;
+  height: 20px;
+  bottom: 5px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gal-container .gal-pics .circles .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+}
+
+.gal-container .gal-pics .circles .active {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  background-color: rgba(170, 170, 170, 0.4);
+  border: 2px solid #e1e1e1;
+}
+
+.gal-container .nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 0px 7px 0px 7px;
+  -webkit-transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.25s;
+  z-index: 99;
+}
+
+.gal-container .nav:hover {
+  background-color: rgba(140, 140, 140, 0.4);
+  cursor: pointer;
+}
+
+.gal-container .icon {
+  padding: 5px 8px 5px 8px;
+  border-radius: 50%;
+  background-color: rgba(170, 170, 170, 0.4);
+}
+
+.gal-container .gal-left {
+  left: 0;
+}
+
+.gal-container .gal-right {
+  right: 0;
+}
+
+.fade {
+  -webkit-animation: linear fade 1s;
+          animation: linear fade 1s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

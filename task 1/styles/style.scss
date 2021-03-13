@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+$icon-color: rgba(170,170,170,0.4);
+$circle: rgba(225,225,225,1);
+$circle-hover: rgba(200,200,200,1);
+$hover: rgba(140,140,140,0.4);
+.gal-container {
+    padding-top: 30px;
+    width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 550px;
+    .gal-pics {
+        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+        height: 480px;
+        position: relative;
+        width: 600px;
+        overflow: hidden;
+        #pics {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            #img{
+                display: block;
+                height: 480px;
+                width: 600px;
+                margin: auto;
+                transition: ease-in-out 1s;
+                position: relative;
+            }
+        }
+        .circles {
+            position: absolute;
+            width: 70px;
+            height: 20px;
+            bottom: 5px;
+            left: 50%;
+            transform: translate(-50%,0);
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            align-items: center;
+            .circle {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $circle;
+            }
+            .active {
+                transform: scale(1.3);
+                background-color: $icon-color;
+                border: 2px solid $circle;
+            }
+        }
+    }
+    .nav {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0px 7px 0px 7px;
+        transition: ease-in-out 0.25s;
+        z-index: 99;
+    }
+    .nav:hover {
+        background-color: $hover;
+        cursor: pointer;
+    }
+    .icon {
+        padding: 5px 8px 5px 8px;
+        border-radius: 50%;
+        background-color: $icon-color;
+    }
+    .gal-left {
+        left: 0;
+    }
+    .gal-right {
+        right: 0;
+    }
+}
+.fade {
+    animation: linear fade 1s;
+}
+@keyframes fade {
+    from{opacity: .1};
+    to{opacity: 1};
+}
